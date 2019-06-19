@@ -1,0 +1,7 @@
+Importing the libraries that we are going to use to develop our model. numpy and pandas to manipulate the matrices and data respectively, sklearn.model_selection for splitting data into train and test set and sklearn.linear_model to train our model using LinearRegression. pickle to save our trained model to the disk, requests to send requests to the server and json to print the result in our terminal.
+We will save our trained model to the disk using the pickle library. Pickle is used to serializing and de-serializing a Python object structure. In which python object is converted into the byte stream. dump() method dumps the object into the file specified in the arguments.
+
+In our case, 
+Here, we have bounded /api with the method predict(). In which predict method gets the data from the json passed by the requestor. model.predict() method takes input from the json and converts it into 2D numpy array the results are stored into the variable named output and we return this variable after converting it into the json object using flasks jsonify() method.we want to save our model so that it can be used by the server. So we will save our object regressor to the file named model.pkl.
+
+We can again load the model by the following method,
